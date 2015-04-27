@@ -7,7 +7,7 @@ static NSDictionary *RCTCurrentDimensions()
 {
   static NSDictionary *dimensions;
   
-  CGSize frameSize = [UIScreen mainScreen].applicationFrame.size;
+  CGSize frameSize = [[UIScreen mainScreen] bounds].size;
   if ((NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_7_1)
       && UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
     frameSize = CGSizeMake(frameSize.height, frameSize.width);
